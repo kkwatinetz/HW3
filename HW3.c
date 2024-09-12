@@ -7,7 +7,7 @@
 #define FALSE 0
 
 int main(){
-    int array[SIZE] = /*{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};*/ {1, 56, 4, 0, -1, 5, 4, 1, 9, 78};
+    int array[SIZE] = {1, 56 , 4 , 0 , -1 , 5 , 4 , 1 , 9 ,78};
     int index;
     int large = array[0];
 
