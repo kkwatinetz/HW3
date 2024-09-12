@@ -35,7 +35,7 @@ int main(){
         }
     }
 
-    if (found == TRUE) printf("3) The array has duplicate."); 
+    if (found == TRUE) printf("3) The array has duplicates."); 
     else printf("3) The array does not have duplicates.");
 
 
