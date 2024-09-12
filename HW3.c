@@ -1,5 +1,5 @@
-//Unit3.hw
-//Katie Kwatinetz, Lanaiya Walters
+//unit3.hw
+//Group Members: Lanaiya Walters, Katie Kwatinetz
 
 #include <stdio.h>
 #define SIZE 10
@@ -7,9 +7,8 @@
 #define FALSE 0
 
 int main(){
-    int array[SIZE] = {1, 56, 4, 0, -1, 5, 4, 1, 9, 78};
+    int array[SIZE] = /*{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};*/ {1, 56, 4, 0, -1, 5, 4, 1, 9, 78};
     int index;
-    int found = FALSE;
     int large = array[0];
 
     //largest value
@@ -19,32 +18,26 @@ int main(){
         }
     }
 
-    printf("1) The largest value is %d \n\n", large);
+    printf("1) The largest value is %d. \n\n", large);
 
     //average
     
+    printf("2) The average is \n\n");
 
-    //duplicate (there is an error)
+    //duplicate
+    int found = FALSE;
+    int temp;
     for (index = 0; index < SIZE && found == FALSE; index++){
-        for(int j = 1; j < (SIZE - 1) && found == FALSE; j++){
-            if (array[index] == array[j]){
+        for(temp = index + 1; temp < SIZE  && found == FALSE; temp++){
+            if (array[index] == array[temp]){
                 found = TRUE;
             }
         }
     }
 
-    if (found == FALSE){
-        printf("3) The array does not have duplicates.");
-    } 
-    else{
-        printf("3) The array has duplicate.");
-    }
+    if (found == TRUE) printf("3) The array has duplicate."); 
+    else printf("3) The array does not have duplicates.");
 
 
     return 0;
 }
-/* Your code is supposed to print the following information:
-
-1)	Largest value
-2)	Average value as a float
-3)	Whether the array has duplicates or not */
