@@ -12,8 +12,10 @@ int main(){
     int large = array[0];
 
     //largest value
-    for(index = 0; index < SIZE; index++){
-        if (array[index] > large){
+    for(index = 0; index < SIZE; index++)
+    {
+        if (array[index] > large)
+        {
             large = array[index];
         }
     }
@@ -21,8 +23,15 @@ int main(){
     printf("1) The largest value is %d. \n\n", large);
 
     //average
-    
-    printf("2) The average is \n\n");
+    float total = 0.0;
+    float average;
+    for(index = 0; index < SIZE; index++)
+    {
+        total += array[index];
+    }
+    average = total/SIZE;
+
+    printf("2) The average is %.2f\n\n", average);
 
     //duplicate
     int found = FALSE;
@@ -35,9 +44,10 @@ int main(){
         }
     }
 
-    if (found == TRUE) printf("3) The array has duplicates."); 
+    if (found == TRUE) printf("3) The array has duplicates.");
     else printf("3) The array does not have duplicates.");
 
 
     return 0;
 }
+
