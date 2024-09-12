@@ -24,7 +24,7 @@ int main(){
     //average
     
 
-    //duplicate
+    //duplicate (there is an error)
     for (index = 0; index < SIZE && found == FALSE; index++){
         for(int j = 1; j < (SIZE - 1) && found == FALSE; j++){
             if (array[index] == array[j]){
